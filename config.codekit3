@@ -65,6 +65,16 @@
 		"oAP": "/media/fonts/manrope-regular.woff2",
 		"oF": 0
 		},
+	"/media/images/dev.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/media/images/dev.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/media/images/github.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -126,6 +136,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/media/styles/modules/_angled-edges.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/media/styles/modules/_animate.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/media/styles/modules/_animate.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
