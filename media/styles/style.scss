@@ -1,4 +1,5 @@
 @import "modules/angled-edges";
+@import "modules/mq";
 
 @font-face {
     font-family: "Manrope";
@@ -89,7 +90,9 @@ main {
 
         header,
         .intro {
-            max-width: 50vw;
+            @include breakpoint(up, xl) {
+                max-width: 50vw;
+            }
         }
 
         .intro {
