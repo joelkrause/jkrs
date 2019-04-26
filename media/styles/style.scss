@@ -1,3 +1,5 @@
+@import "modules/angled-edges";
+
 @font-face {
     font-family: "Manrope";
     src: url("../fonts/manrope-regular.woff2") format("woff2"),
@@ -22,6 +24,10 @@
     font-weight: 800;
 }
 
+:root {
+    --mainColor: #191919;
+}
+
 body,
 html {
     margin: 0;
@@ -33,20 +39,19 @@ html {
 }
 
 body {
-    background-color: #f5f5dc;
-    color: #00f;
+    background-color: var(--mainColor);
+    color: #fff;
     font-family: "Manrope", sans-serif;
-    display: flex;
     height: 100vh;
-    align-items: flex-end;
+    line-height: 2rem;
 
     a {
-        color: #00f;
+        color: var(--mainColor);
     }
 }
 
 #preloader {
-    background-color: #00f;
+    background-color: var(--mainColor);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -60,15 +65,20 @@ body {
 
 main {
     &.main__body {
-        max-width: 50vw;
-        padding: 0 0 0 7.5vw;
+        background-color: #fff;
+        color: var(--mainColor);
+        padding: 7.5vw;
+        @include angled-edge(4, bottom, left, var(--mainColor), right);
+
+        header,
+        .intro {
+            max-width: 50vw;
+        }
 
         .intro {
-            padding: 7.5vw 0;
-
             h1 {
                 font-weight: 800;
-                font-size: 2.25rem;
+                font-size: 1.5rem;
                 margin: 0 0 2.5vw;
             }
 
