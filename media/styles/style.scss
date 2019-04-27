@@ -1,4 +1,3 @@
-@import "modules/angled-edges";
 @import "modules/mq";
 
 @font-face {
@@ -27,6 +26,8 @@
 
 :root {
     --mainColor: #191919;
+    --gradient-start: #121317;
+    --gradient-end: #323B42;
 }
 
 body,
@@ -40,7 +41,8 @@ html {
 }
 
 body {
-    background-color: var(--mainColor);
+    // background-color: var(--mainColor);
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
     color: #fff;
     font-family: "Manrope", sans-serif;
     height: 100vh;
@@ -81,7 +83,21 @@ main {
         background-color: #fff;
         color: var(--mainColor);
         padding: 7.5vw;
-        @include angled-edge(4, bottom, left, var(--mainColor), right);
+        position: relative;
+
+        #wave {
+            position: absolute;
+            height: 200px;
+            bottom: -199px;
+            left: 0;
+            width: 100%;
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
 
         header {
             opacity: 0;
