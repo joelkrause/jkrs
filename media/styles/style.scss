@@ -135,6 +135,7 @@ main {
                 .social__media {
                     display: flex;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     a {
                         display: block;
