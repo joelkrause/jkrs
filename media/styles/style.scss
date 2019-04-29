@@ -1,27 +1,15 @@
 @import "modules/mq";
 
-@font-face {
-    font-family: "Manrope";
-    src: url("../fonts/manrope-regular.woff2") format("woff2"),
-        /* Modern browsers */
-        url("../fonts/manrope-regular.woff") format("woff"),
-        /* Legacy browsers */
-        url("../fonts/manrope-regular.otf") format("truetype");
-    /* Android, iOS */
-    font-style: normal;
-    font-weight: 400;
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
 }
 
-@font-face {
-    font-family: "Manrope";
-    src: url("../fonts/manrope-extrabold.woff2") format("woff2"),
-        /* Modern browsers */
-        url("../fonts/manrope-extrabold.woff") format("woff"),
-        /* Legacy browsers */
-        url("../fonts/manrope-extrabold.otf") format("truetype");
-    /* Android, iOS */
-    font-style: normal;
-    font-weight: 800;
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
 }
 
 :root {
@@ -41,16 +29,24 @@ html {
 }
 
 body {
-    // background-color: var(--mainColor);
     background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
     color: #fff;
-    font-family: "Manrope", sans-serif;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    font-weight: 300;
     height: 100vh;
     line-height: 2rem;
 
     a {
         color: var(--mainColor);
     }
+}
+
+h1 {
+    font-weight: 300;
 }
 
 #preloader {
@@ -113,7 +109,6 @@ main {
 
         .intro {
             h1 {
-                font-weight: 800;
                 font-size: 1.5rem;
                 margin: 0 0 2.5vw;
                 opacity: 0;
@@ -137,30 +132,18 @@ main {
                 animation: fadeIn 0.5s ease-in both;
                 animation-delay: 1.5s;
 
-                .buttons {
-                    a {
-                        display: inline-block;
-                        border: 1px solid;
-                        padding: 5px 15px;
-                        border-radius: 3px;
-                        text-decoration: none;
-                        font-size: 14px;
-                        letter-spacing: 1px;
-                    }
-                }
-
                 .social__media {
                     display: flex;
                     align-items: center;
 
                     a {
                         display: block;
-                        margin-left: 15px;
-
-                        img {
-                            display: block;
-                            width: 25px;
-                        }
+                        margin-right: 15px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 0.8rem;
+                        text-decoration: none;
+                        border-bottom: 1px dotted;
                     }
                 }
             }
