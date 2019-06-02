@@ -1,15 +1,27 @@
 @import "modules/mq";
 
-@import url('https://rsms.me/inter/inter.css');
-
-html {
-    font-family: 'Inter', sans-serif;
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/manrope-regular.woff2") format("woff2"),
+        /* Modern browsers */
+        url("../fonts/manrope-regular.woff") format("woff"),
+        /* Legacy browsers */
+        url("../fonts/manrope-regular.otf") format("truetype");
+    /* Android, iOS */
+    font-style: normal;
+    font-weight: 400;
 }
 
-@supports (font-variation-settings: normal) {
-    html {
-        font-family: 'Inter var', sans-serif;
-    }
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/manrope-extrabold.woff2") format("woff2"),
+        /* Modern browsers */
+        url("../fonts/manrope-extrabold.woff") format("woff"),
+        /* Legacy browsers */
+        url("../fonts/manrope-extrabold.otf") format("truetype");
+    /* Android, iOS */
+    font-style: normal;
+    font-weight: 800;
 }
 
 :root {
@@ -39,14 +51,11 @@ body {
     font-weight: 300;
     height: 100vh;
     line-height: 2rem;
+    font-family: "Manrope", sans-serif;
 
     a {
         color: var(--mainColor);
     }
-}
-
-h1 {
-    font-weight: 400;
 }
 
 #preloader {
@@ -98,6 +107,10 @@ main {
         header {
             opacity: 0;
             animation: fadeIn 0.5s ease-in both;
+
+            img {
+                width: 100px;
+            }
         }
 
         header,
